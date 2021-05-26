@@ -1,0 +1,766 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    /* ========== Fonts  ==========*/
+    --Roboto: 'Roboto', sans-serif;
+}
+
+:root{
+    /* ========== Color ==========*/
+    --reserved-button: #F6AD49;
+    --reserved-buttonRed: #E60033;
+    --white: #ffff;
+    --black: #000000;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.bd-container{
+    max-width: 1240px;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+@media screen and (min-width: 1240px) {
+    .bd-container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ========== Header Navigation ========== */
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--Roboto);
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.header-content .logo img{
+    margin-top: 10px;
+    width: 55px;
+    height: auto;
+}
+
+.header-container{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 20px 40px;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+.header-container.sticky{
+    background-color: var(--white);
+    padding: 5px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-container.sticky li a{
+    color: var(--black);
+}
+
+.nav-menu{
+    position: relative;
+    display: flex;
+}
+
+.nav-menu li{
+    margin-left: 40px;
+}
+
+.nav-menu li a:hover{
+    color: var(--reserved-buttonRed);
+}
+
+.reservation{
+    padding: 10px 20px;
+    background-color: var(--reserved-button);
+    color: var(--white);
+    border-radius: 4px;
+}
+
+.reservation:hover{
+    background-color: var(--reserved-buttonRed);
+    transition: 1s;
+}
+
+
+.menu-toggle, .mobile{
+    display: none;
+}
+
+/* ========== Header Navigation END ========== */
+
+/* ========== Hero Section ========== */
+.banner-container{
+    background-image: url(/img/woods.jpg);
+    background-size: cover;
+   
+}
+
+.banner-content{
+    min-height: 90vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-family: var(--Roboto);
+    padding-top: 100px;
+    overflow: hidden;
+}
+
+.banner-content .banner-info{
+    position: relative;
+    top: 50px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.banner-content .banner-info h1{
+    font-size: 5rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.banner-content .banner-img{
+    position: relative;
+    top: 40px;
+}
+
+.banner-content .banner-img img{
+    width: 100%;
+    max-width: 500px;
+    
+}
+
+/* ========== Hero Section END ========== */
+
+/* ========== Menu Section ========== */
+
+.menu-container{
+    margin-top: 50px;
+    font-family: var(--Roboto);
+    margin-bottom: 50px;
+}
+
+.menu-content .ramen-icon{
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+.menu-content h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+
+.ramen-menu-container{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.ramen-menu-container .ramen{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.ramen-menu-container .ramen .ramen-info{
+    width: 100%;
+    max-width: 350px;
+}
+
+.ramen-menu-container .ramen .ramen-info h3{
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.ramen-menu-container .ramen .ramen-info p{
+    font-size: 0.9rem;
+}
+
+.ramen-menu-container .ramen  img{
+    width: 100%;
+    max-width: 200px;
+}
+
+.ramen-menu-container .ramen .ramen-info .price{
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.full-menu{
+    text-align: center;
+}
+
+.full-menu a{
+    text-transform: uppercase;
+    padding: 11px 20px;
+    background-color: var(--reserved-button);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.full-menu a:hover{
+    background-color: var(--reserved-buttonRed);
+}
+/* ========== Menu Section END ========== */
+
+/* ========== Other Menu Section ========== */
+.other-menu-container{
+    margin-top: 150px;
+    font-family: var(--Roboto);
+    margin-bottom: 50px;
+}
+
+.other-menu-content h3{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.other-menu-content .other{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-gap: 10px;
+    
+}
+
+.other-menu-content .other .food{
+    overflow: hidden;
+    border-radius: 5px;
+    overflow:hidden;
+}
+
+.other-menu-content .other img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.other-menu-content .other .food:first-child{
+    grid-column-start: span 2;
+    grid-row-start: span 3;
+}
+
+.other-menu-content .other .food:nth-child(2n+3){
+    grid-row-start: span 3;
+}
+
+.other-menu-content .other .food:nth-child(4n+5){
+    grid-column-start: span 2 ;
+    
+}
+
+.other-menu-content .other .food:nth-child(6){
+    grid-row: 4 / span 3;
+}
+
+/* Hover Effect */
+.other-menu-content .other  img:hover{
+    transform: scale(1.1);
+}
+
+/* ========== Other Menu Section END ========== */
+
+/* ========== About Us Section ========== */
+.about-us-container{
+    margin-top: 180px;
+}
+
+.about-us-content{
+    font-family: var(--Roboto);
+}
+
+.about-us-content h3{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.about-us-content .our-story{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.about-us-content .our-story .about-us-info h2{
+    font-size: 1.9rem;
+    margin-bottom: 30px;
+}
+
+.about-us-content .our-story .about-us-info p:nth-child(2){
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+.about-us-content .our-story .about-us-info p:nth-child(3){
+    margin-top: 30px;
+    font-size: 1.2rem;
+    padding: 0 10px;
+}
+
+.about-us-content .our-story .about-us-img img{
+    width: 100%;
+    max-width: 650px;
+    border-radius: 4px;
+}
+
+.about-us-content .our-story .about-us-img img:nth-child(2){
+    width: 100%;
+    max-width: 450px;
+    border-radius: 4px;
+}
+
+.about-us-content .our-story .other-info p{
+    padding: 0 10px;
+    font-size: 1.2rem;
+}
+/* ========== About Us Section END ========== */
+
+/* ========== Location Section ========== */
+
+.location-container{
+    margin-top: 150px;
+    margin-bottom: 50px;
+    font-family: var(--Roboto);
+}
+
+.location-content h3{
+    text-align: center;
+}
+
+
+.location-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+    font-family: var(--Roboto);
+}
+
+.location-content .location-wrapper .location-map .map{
+    width: 100%;
+}
+
+.location-content ,.location-wrapper .location-map h3{
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    padding: 0 10px;
+}
+
+.location-content .location-wrapper .contact{
+    padding: 0 20px;
+}
+
+.location-content .location-wrapper .contact h3{
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+input[type=text], input[type=email], input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    resize: vertical;
+}
+
+textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    height: 220px;
+    resize: none;
+}
+
+input[type=submit]{
+    background-color: var(--reserved-button);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+input[type=submit]:hover{
+    background-color: var(--reserved-buttonRed);
+    cursor: pointer;
+}
+
+#swal2-title{
+    font-size: 2rem;
+    font-family: var(--Roboto);
+}
+
+#swal2-content{
+    font-family: var(--Roboto);
+}
+
+/* ========== Location Section END ========== */
+
+/* ========== Footer Section ========== */
+
+.footer-container{
+    background-color: var(--black);
+    margin-top: 80px;
+}
+
+
+.footer-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    font-family: var(--Roboto);
+}
+
+.footer-content .footer-links .footer-menu{
+    display: flex;
+}
+
+.footer-content .footer-links .footer-menu li{
+    margin-left: 1.5rem;
+}
+
+.footer-content .footer-links a{
+    font-size: 1.3rem;
+}
+
+.footer-content .footer-links a:hover{
+    color: var(--reserved-buttonRed);
+}
+
+.footer-content .footer-social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    position: relative;
+}
+
+.footer-content .footer-social-media a  {
+   margin-left: 20px;
+}
+
+.footer-content .footer-social-media a:hover{
+    color: var(--reserved-buttonRed);
+  
+}
+
+.footer-content .footer-logo img{
+    width: 75px;
+}
+
+/* ========== Footer Section END ========== */
+
+
+@media screen and (max-width: 900px){
+
+
+    /* ========== Header Navigation ========== */
+    .header-container{
+        padding: 10px 20px;
+    }
+
+    .nav-menu, .reservation{
+        display: none;
+    }
+
+    header .nav-menu.active{
+        width: 80%;
+        height: 400px;
+        position: fixed;
+        top: 78px;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: 10%;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--white);
+        border-radius: 4px;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active li{
+        margin-bottom: 30px;
+        margin-left: 0;
+    }
+
+    .nav-menu.active li a{
+        color: var(--black);
+        font-size: 1.5rem;
+    }
+
+    .nav-menu.active li a:hover{
+        color: var(--reserved-buttonRed);
+    }
+
+    .header-content .logo img{
+        width: 50px;
+    }
+
+    .nav-menu.active .mobile{
+        display: block;
+        color: var(--white);
+    }
+
+    
+    .menu-toggle {
+        display: block;
+        position: relative;
+        width: 50px;
+        height: 20px;
+        background: url(/img/icon-hamburger.svg) no-repeat center;
+        color: var(--white);
+        background-size: 30px;
+        cursor: pointer;
+        
+      }
+
+      .menu-toggle.active{
+        background: url(/img/icon-close.svg) no-repeat center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+    }
+
+    /* ========== Header Navigation END ========== */
+
+    /* ========== Hero Section ========== */
+
+    .banner-content .banner-info{
+        top: 0;
+    }
+  
+    .banner-content .banner-info h1{
+        font-size: 3.5rem;
+    }
+
+    .banner-content .banner-info p{
+        font-size: 0.9rem;
+    }
+
+    /* ========== Hero Section END ========== */
+
+    /* ========== Menu Section ========== */
+    .ramen-menu-container{
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    /* ========== Menu Section END ========== */
+
+    /* ========== About Us Section ========== */
+.about-us-container{
+    margin-top: 180px;
+}
+
+.about-us-content{
+    font-family: var(--Roboto);
+}
+
+.about-us-content h3{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.about-us-content .our-story{
+    grid-template-columns: 1fr;
+}
+
+.about-us-content .our-story .about-us-info h2{
+    font-size: 1.9rem;
+    margin-bottom: 30px;
+}
+
+.about-us-content .our-story .about-us-info p:nth-child(2){
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.about-us-content .our-story .about-us-info p:nth-child(3){
+    margin-top: 30px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.about-us-content .about-us-img img{
+    margin: 0 auto;
+    display: block;
+    max-width: 750px;
+    margin-bottom: 20px;
+}
+
+.about-us-content .about-us-img:nth-child(3){
+    grid-row-start: 4;
+}
+
+
+.about-us-content .our-story .other-info{
+    margin-bottom: 20px;
+}
+
+/* ========== About Us Section END ========== */
+
+    .location-wrapper{
+        grid-template-columns: 1fr;
+    }
+
+    .location-content .location-wrapper .contact{
+        grid-row-start: 1;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer-content{
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content .footer-links .footer-menu{
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+        margin-top: 50px;
+    }
+
+    .footer-content .footer-links .footer-menu li{
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .footer-content .footer-logo img{
+        display: block;
+        margin: auto
+    }
+
+    .footer-content .footer-social-media a{
+        margin-right: 20px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+      /* ========== Header Navigation ========== */
+      .header-container{
+        padding: 10px 20px;
+    }
+
+    .nav-menu.active li{
+        margin-bottom: 30px;
+        margin-left: 0;
+    }
+
+    .nav-menu.active li a{
+        color: var(--black);
+    }
+
+    .nav-menu.active li a:hover{
+        color: var(--reserved-buttonRed);
+    }
+
+
+    /* ========== Header Navigation END ========== */
+
+    /* ========== Hero Section ========== */
+    .banner-content{
+        padding: 0;
+    }
+
+    .banner-content .banner-info{
+        margin: 0;
+    }
+
+    .banner-content .banner-info h1{
+        font-size: 2.5rem;
+    }
+
+
+    /* ========== Hero Section END ========== */
+
+    .ramen-menu-container{
+        grid-gap: 10px;
+    }
+    
+    .ramen-menu-container .ramen{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .ramen-menu-container .ramen .ramen-info h3{
+      
+        font-size: 1.8rem;
+    }
+    
+    .ramen-menu-container .ramen .ramen-info p{
+        font-size: 0.8rem;
+        width: 290px;
+        margin: auto;
+    }
+
+    /* ========== Menu Section END ========== */
+
+    /* ========== Other Menu Section ========== */
+
+    .other-menu-content .other{
+        display: block;
+    }
+
+    .other-menu-content .other .food {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+     /* ========== Other Menu Section END ========== */
+
+   
+
+}
+
+
