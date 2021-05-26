@@ -412,6 +412,7 @@ input[type=submit]{
     color: var(--white);
     font-size: 1rem;
     font-weight: bold;
+    -webkit-appearance: none;
 }
 
 input[type=submit]:hover{
