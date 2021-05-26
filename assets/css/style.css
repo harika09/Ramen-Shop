@@ -157,6 +157,12 @@ a{
 
 /* ========== Menu Section ========== */
 
+.content-title{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
 .menu-container{
     margin-top: 50px;
     font-family: var(--Roboto);
@@ -236,10 +242,7 @@ a{
     margin-bottom: 50px;
 }
 
-.other-menu-content h2{
-    text-align: center;
-    font-size: 2rem;
-    text-transform: uppercase;
+.other-menu-content .content-title{
     margin-bottom: 50px;
 }
 
@@ -589,20 +592,12 @@ input[type=submit]:hover{
         font-family: var(--Roboto);
     }
 
-    .content-title{
-        text-align: center;
-        font-size: 1.5rem;
-        text-transform: uppercase;
-    }
-
+  
     .about-us-content .our-story{
         grid-template-columns: 1fr;
     }
 
-    .about-us-content .our-story .about-us-info h2{
-        font-size: 1.1rem;
-        margin-bottom: 20px;
-    }
+    
 
     .about-us-content .our-story .about-us-info p:nth-child(2){
         font-size: 1.1rem;
