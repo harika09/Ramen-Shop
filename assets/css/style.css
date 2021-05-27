@@ -268,7 +268,7 @@ a{
     height: 100%;
     width: 100%;
     transition: 1s;
-    cursor: pointer;
+
 }
 
 .other-menu-content .other .food:first-child{
@@ -741,6 +741,16 @@ input[type=submit]:hover{
         display: block;
         width: 100%;
         height: auto;
+       
+    }
+
+    .other-menu-content .other .food img{
+        border-radius: 4px;
+    }
+
+    /* Hover Effect */
+    .other-menu-content .other  img:hover{
+        transform: none;
     }
 
      /* ========== Other Menu Section END ========== */
